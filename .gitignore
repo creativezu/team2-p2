@@ -6,3 +6,7 @@ derby.log
 .bloop
 .bsp
 metastore_db
+target
+covid-data.csv
+README.md
+project
