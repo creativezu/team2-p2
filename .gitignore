@@ -1,3 +1,8 @@
 .metals
 .vscode
 .DS_Store
+Project1Ex.scala
+derby.log
+.bloop
+.bsp
+metastore_db
