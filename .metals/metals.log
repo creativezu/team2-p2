@@ -1,0 +1,246 @@
+2022.02.08 16:25:33 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/user/Projects/Big Data/Team 2 P2/.metals/lsp.trace.json or /Users/user/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.02.08 16:25:34 INFO  logging to file /Users/user/Projects/Big Data/Team 2 P2/.metals/metals.log
+2022.02.08 16:25:34 INFO  Started: Metals version 0.11.1 in workspace '/Users/user/Projects/Big Data/Team 2 P2' for client Visual Studio Code 1.63.2.
+2022.02.08 16:25:34 INFO  Parse release: 1.8.0_321
+2022.02.08 16:25:35 INFO  time: initialize in 1.76s
+2022.02.08 16:25:36 WARN  Build server is not auto-connectable.
+2022.02.08 16:25:36 WARN  no build tool detected in workspace '/Users/user/Projects/Big Data/Team 2 P2'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.02.08 16:25:37 WARN  no build target for: /Users/user/Projects/Big Data/WordCount/src/main/scala/WordCount.scala
+2022.02.08 16:25:46 INFO  no build target found for /Users/user/Projects/Big Data/WordCount/src/main/scala/WordCount.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.02.08 16:25:55 INFO  time: code lens generation in 15s
+2022.02.08 16:51:38 WARN  no build target for: /Users/user/Projects/Big Data/Project1/src/main/scala/Project1.scala
+2022.02.08 16:53:52 WARN  no build target for: /Users/user/Projects/Big%20Data/211213-Big-Data-Reston/week%207/Project1Ex.scala
+2022.02.08 20:32:45 WARN  no build target for: /Users/user/Projects/Big Data/Project1/src/main/scala/Project1.scala
+2022.02.08 20:34:17 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/Project2.scala
+2022.02.08 20:34:19 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/Project2.scala
+2022.02.08 20:39:06 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/Project2.scala
+2022.02.08 20:48:53 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/Project2.scala
+2022.02.08 20:48:57 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/Project2.scala
+2022.02.08 20:48:59 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/Project2.scala
+2022.02.08 20:50:33 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/Project2.scala
+2022.02.08 20:56:28 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/src/main/scala/Project2.scala
+2022.02.08 21:03:28 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/src/main/scala/Project2.scala
+2022.02.09 09:42:24 INFO  shutting down Metals
+2022.02.09 10:41:48 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/user/Projects/Big Data/Team 2 P2/.metals/lsp.trace.json or /Users/user/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.02.09 10:41:49 INFO  logging to file /Users/user/Projects/Big Data/Team 2 P2/.metals/metals.log
+2022.02.09 10:41:49 INFO  Started: Metals version 0.11.1 in workspace '/Users/user/Projects/Big Data/Team 2 P2' for client Visual Studio Code 1.63.2.
+2022.02.09 10:41:49 INFO  Parse release: 1.8.0_321
+2022.02.09 10:41:51 INFO  time: initialize in 1.83s
+2022.02.09 10:41:52 WARN  Build server is not auto-connectable.
+2022.02.09 10:41:52 WARN  no build tool detected in workspace '/Users/user/Projects/Big Data/Team 2 P2'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.02.09 10:41:52 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/src/main/scala/Project2.scala
+2022.02.09 10:42:01 INFO  no build target found for /Users/user/Projects/Big Data/Team 2 P2/src/main/scala/Project2.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.02.09 10:42:19 INFO  time: code lens generation in 25s
+Feb 09, 2022 10:43:36 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6
+2022.02.09 10:47:15 INFO  running '/Library/Java/JavaVirtualMachines/jdk1.8.0_321.jdk/Contents/Home/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/8d/0r3w9q4d5pd_lvg0b67_fl540000gn/T/metals1072086732268256327/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.02.09 10:47:15 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/project/metals.sbt
+2022.02.09 10:47:15 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/project/project/metals.sbt
+2022.02.09 10:47:21 INFO  [info] welcome to sbt 1.6.1 (Oracle Corporation Java 1.8.0_321)
+2022.02.09 10:47:37 INFO  [info] loading settings for project team-2-p2-build-build from metals.sbt ...
+2022.02.09 10:47:41 INFO  [info] loading project definition from /Users/user/Projects/Big Data/Team 2 P2/project/project
+2022.02.09 10:47:46 INFO  [info] loading settings for project team-2-p2-build from metals.sbt ...
+2022.02.09 10:47:46 INFO  [info] loading project definition from /Users/user/Projects/Big Data/Team 2 P2/project
+2022.02.09 10:47:55 INFO  [success] Generated .bloop/team-2-p2-build.json
+2022.02.09 10:47:59 INFO  [success] Total time: 13 s, completed Feb 9, 2022 10:47:59 AM
+2022.02.09 10:47:59 INFO  [info] set current project to team-2-p2 (in build file:/Users/user/Projects/Big%20Data/Team%202%20P2/)
+2022.02.09 10:48:01 INFO  [success] Generated .bloop/team-2-p2.json
+2022.02.09 10:48:01 INFO  [success] Generated .bloop/team-2-p2-test.json
+2022.02.09 10:48:01 INFO  [success] Total time: 1 s, completed Feb 9, 2022 10:48:01 AM
+2022.02.09 10:48:01 INFO  time: ran 'sbt bloopInstall' in 46s
+2022.02.09 10:48:01 INFO  Attempting to connect to the build server...
+2022.02.09 10:48:07 INFO  skipping build import with status 'Installed'
+2022.02.09 10:48:17 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/user/Projects/Big Data/Team 2 P2/.metals/bsp.trace.json or /Users/user/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.02.09 10:48:20 INFO  Attempting to connect to the build server...
+2022.02.09 10:48:20 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/user/Projects/Big Data/Team 2 P2/project/.metals/bsp.trace.json or /Users/user/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.02.09 10:48:20 INFO  time: Connected to build server in 18s
+2022.02.09 10:48:20 INFO  Connected to Build server: Bloop v1.4.12
+2022.02.09 10:48:20 INFO  time: Imported build in 0.22s
+2022.02.09 10:48:28 INFO  time: indexed workspace in 7.9s
+2022.02.09 10:48:32 INFO  compiling team-2-p2 (1 scala source)
+2022.02.09 10:48:36 INFO  time: compiled team-2-p2 in 4.66s
+2022.02.09 10:49:54 INFO  running '/Library/Java/JavaVirtualMachines/jdk1.8.0_321.jdk/Contents/Home/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar /var/folders/8d/0r3w9q4d5pd_lvg0b67_fl540000gn/T/metals6894869986517899136/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.02.09 10:49:56 INFO  [info] welcome to sbt 1.6.1 (Oracle Corporation Java 1.8.0_321)
+2022.02.09 10:49:58 INFO  [info] loading settings for project team-2-p2-build-build from metals.sbt ...
+2022.02.09 10:50:00 INFO  [info] loading project definition from /Users/user/Projects/Big Data/Team 2 P2/project/project
+2022.02.09 10:50:01 INFO  [info] loading settings for project team-2-p2-build from metals.sbt ...
+2022.02.09 10:50:01 INFO  [info] loading project definition from /Users/user/Projects/Big Data/Team 2 P2/project
+2022.02.09 10:50:09 INFO  [success] Generated .bloop/team-2-p2-build.json
+2022.02.09 10:50:09 INFO  [success] Total time: 8 s, completed Feb 9, 2022 10:50:10 AM
+2022.02.09 10:50:15 INFO  [info] loading settings for project team-2-p2 from build.sbt ...
+2022.02.09 10:50:15 INFO  [info] set current project to Project1Ex (in build file:/Users/user/Projects/Big%20Data/Team%202%20P2/)
+2022.02.09 10:50:28 INFO  [success] Generated .bloop/team-2-p2-test.json
+2022.02.09 10:50:28 INFO  [success] Generated .bloop/team-2-p2.json
+2022.02.09 10:50:28 INFO  [success] Total time: 13 s, completed Feb 9, 2022 10:50:28 AM
+2022.02.09 10:50:29 INFO  time: ran 'sbt bloopInstall' in 34s
+2022.02.09 10:50:29 INFO  Disconnecting from Bloop session...
+2022.02.09 10:50:29 INFO  Shut down connection with build server.
+2022.02.09 10:50:29 INFO  Shut down connection with build server.
+2022.02.09 10:50:29 INFO  Attempting to connect to the build server...
+2022.02.09 10:50:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/user/Projects/Big Data/Team 2 P2/.metals/bsp.trace.json or /Users/user/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.02.09 10:50:29 INFO  Attempting to connect to the build server...
+2022.02.09 10:50:29 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/user/Projects/Big Data/Team 2 P2/project/.metals/bsp.trace.json or /Users/user/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.02.09 10:50:29 INFO  time: Connected to build server in 0.45s
+2022.02.09 10:50:29 INFO  Connected to Build server: Bloop v1.4.12
+2022.02.09 10:50:29 INFO  time: Imported build in 0.11s
+2022.02.09 10:50:48 INFO  time: indexed workspace in 19s
+2022.02.09 10:51:00 INFO  compiling team-2-p2 (1 scala source)
+2022.02.09 10:51:20 WARN  there were three deprecation warnings; re-run with -deprecation for details
+2022.02.09 10:51:31 INFO  time: compiled team-2-p2 in 30s
+2022.02.09 11:03:47 INFO  compiling team-2-p2 (1 scala source)
+2022.02.09 11:03:49 WARN  there were three deprecation warnings; re-run with -deprecation for details
+2022.02.09 11:03:49 INFO  time: compiled team-2-p2 in 2.29s
+2022.02.09 11:06:51 INFO  compiling team-2-p2 (1 scala source)
+2022.02.09 11:06:53 WARN  there were three deprecation warnings; re-run with -deprecation for details
+2022.02.09 11:06:53 INFO  time: compiled team-2-p2 in 2.18s
+2022.02.09 11:07:01 INFO  shutting down Metals
+2022.02.09 11:07:01 INFO  Shut down connection with build server.
+2022.02.09 11:07:01 INFO  Shut down connection with build server.
+2022.02.09 11:08:14 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/user/Projects/Big Data/Team 2 P2/.metals/lsp.trace.json or /Users/user/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.02.09 11:08:15 INFO  logging to file /Users/user/Projects/Big Data/Team 2 P2/.metals/metals.log
+2022.02.09 11:08:15 INFO  Started: Metals version 0.11.1 in workspace '/Users/user/Projects/Big Data/Team 2 P2' for client Visual Studio Code 1.63.2.
+2022.02.09 11:08:15 INFO  Parse release: 1.8.0_321
+2022.02.09 11:08:17 INFO  time: initialize in 1.7s
+2022.02.09 11:08:19 INFO  Attempting to connect to the build server...
+2022.02.09 11:08:19 INFO  skipping build import with status 'Installed'
+Feb 09, 2022 11:08:20 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2022.02.09 11:08:21 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/user/Projects/Big Data/Team 2 P2/.metals/bsp.trace.json or /Users/user/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.02.09 11:08:21 INFO  Attempting to connect to the build server...
+2022.02.09 11:08:21 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/user/Projects/Big Data/Team 2 P2/project/.metals/bsp.trace.json or /Users/user/Library/Caches/org.scalameta.metals/bsp.trace.json
+2022.02.09 11:08:21 INFO  time: Connected to build server in 2.7s
+2022.02.09 11:08:22 INFO  Connected to Build server: Bloop v1.4.12
+2022.02.09 11:08:25 INFO  no build target found for /Users/user/Projects/Big Data/Team 2 P2/src/main/scala/Project2.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.02.09 11:08:25 INFO  time: code lens generation in 5.76s
+2022.02.09 11:08:26 INFO  time: Imported build in 0.15s
+2022.02.09 11:08:26 INFO  no build target found for /Users/user/Projects/Big%20Data/211213-Big-Data-Reston/week%207/Project1Ex.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.02.09 11:08:30 INFO  time: code lens generation in 8.91s
+2022.02.09 11:08:36 INFO  time: indexed workspace in 10s
+2022.02.09 11:08:36 WARN  no build target for: /Users/user/Projects/Big%20Data/211213-Big-Data-Reston/week%207/Project1Ex.scala
+2022.02.09 11:08:37 WARN  no build target for: /Users/user/Projects/Big%20Data/211213-Big-Data-Reston/week%207/Project1Ex.scala
+2022.02.09 11:08:57 INFO  compiling team-2-p2 (1 scala source)
+2022.02.09 11:08:58 WARN  there were three deprecation warnings; re-run with -deprecation for details
+2022.02.09 11:08:58 INFO  time: compiled team-2-p2 in 1.83s
+2022.02.09 11:14:13 INFO  compiling team-2-p2 (1 scala source)
+2022.02.09 11:14:15 WARN  there were three deprecation warnings; re-run with -deprecation for details
+2022.02.09 11:14:15 INFO  time: compiled team-2-p2 in 1.54s
+2022.02.09 11:16:48 INFO  compiling team-2-p2 (1 scala source)
+2022.02.09 11:16:50 WARN  there were three deprecation warnings; re-run with -deprecation for details
+2022.02.09 11:16:50 INFO  time: compiled team-2-p2 in 1.43s
+2022.02.09 11:45:34 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/Project1Ex.scala
+2022.02.09 11:45:35 WARN  no build target for: /Users/user/Projects/Big Data/Team 2 P2/Project1Ex.scala
+2022.02.09 11:45:35 INFO  skipping build import with status 'Installed'
+2022.02.09 11:46:59 INFO  compiling team-2-p2 (1 scala source)
+2022.02.09 11:47:00 WARN  there were three deprecation warnings; re-run with -deprecation for details
+2022.02.09 11:47:00 INFO  time: compiled team-2-p2 in 1.34s
+2022.02.09 12:17:20 INFO  compiling team-2-p2 (1 scala source)
+2022.02.09 12:17:21 WARN  there were three deprecation warnings; re-run with -deprecation for details
+2022.02.09 12:17:21 INFO  time: compiled team-2-p2 in 1.24s
+Feb 09, 2022 12:29:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "workspace/didChangeWatchedFiles",
+  "params": {
+    "changes": [
+      {
+        "uri": "file:///Users/user/Projects/Big%20Data/Team%202%20P2/project/metals.sbt",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/user/Projects/Big%20Data/Team%202%20P2/project/project/metals.sbt",
+        "type": 3
+      },
+      {
+        "uri": "file:///Users/user/Projects/Big%20Data/Team%202%20P2/project/build.properties",
+        "type": 3
+      }
+    ]
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: /Users/user/Projects/Big Data/Team 2 P2/project/metals.sbt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$onChange$1(MetalsLanguageServer.scala:1366)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$onChange$1$adapted(MetalsLanguageServer.scala:1365)
+	at scala.collection.immutable.Stream.foreach(Stream.scala:533)
+	at scala.meta.internal.metals.MetalsLanguageServer.onChange(MetalsLanguageServer.scala:1365)
+	at scala.meta.internal.metals.MetalsLanguageServer.didChangeWatchedFiles(MetalsLanguageServer.scala:1309)
+	... 16 more
+
+Feb 09, 2022 12:32:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "workspace/didChangeWatchedFiles",
+  "params": {
+    "changes": [
+      {
+        "uri": "file:///Users/user/Projects/Big%20Data/Team%202%20P2/build.sbt",
+        "type": 3
+      }
+    ]
+  }
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.NoSuchFileException: /Users/user/Projects/Big Data/Team 2 P2/build.sbt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:214)
+	at java.nio.file.Files.newByteChannel(Files.java:361)
+	at java.nio.file.Files.newByteChannel(Files.java:407)
+	at java.nio.file.Files.readAllBytes(Files.java:3152)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$onChange$1(MetalsLanguageServer.scala:1366)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$onChange$1$adapted(MetalsLanguageServer.scala:1365)
+	at scala.collection.immutable.Stream.foreach(Stream.scala:533)
+	at scala.meta.internal.metals.MetalsLanguageServer.onChange(MetalsLanguageServer.scala:1365)
+	at scala.meta.internal.metals.MetalsLanguageServer.didChangeWatchedFiles(MetalsLanguageServer.scala:1309)
+	... 16 more
+
