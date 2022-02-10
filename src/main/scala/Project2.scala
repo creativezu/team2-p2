@@ -13,7 +13,7 @@ object Project2 {
 
     val spark = SparkSession.builder
     .master("local[*]")
-    .appName("Team 2 Project 2")
+    .appName("Project2")
     .getOrCreate()
 
     // This code is necessary for windows-based spark/hive/hadoop environments
