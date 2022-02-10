@@ -16,12 +16,13 @@ object Project2 {
     .appName("Team 2 Project 2")
     .getOrCreate()
 
-    // This block of code is all necessary for spark/hive/hadoop
+    // This block of code is all necessary for spark/hive/hadoop (WINDOWS)
     System.setSecurityManager(null)
     /*System.setProperty(
       "hadoop.home.dir",
       "C:\\hadoop\\"
     ) */ // change if winutils.exe is in a different bin folder
+
     val conf = new SparkConf()
       .setMaster("local")
       .setAppName("Project2") // Change to whatever app name you want
@@ -31,23 +32,24 @@ object Project2 {
     import hiveCtx.implicits._
 
     
-
-    // Run method to insert Covid data. Only needs to be ran initially, then table data1A will be persisted.
-    //insertCovidData(hiveCtx)
-
     /*
-     * Here is where I would ask the user for input on what queries they would like to run, as well as
-     * method calls to run those queries. An example is below, top10DeathRates(hiveCtx)
+     * Here is where we might take
+     * in an input from user
      *
      */
 
-    top10DeathRates()
-    maxDeaths()
-    mostVaxxed()
-    leastVaxxed()
-    leastDeaths()
-    oldestPop()
-    youngestPop()
+
+
+    queryOne()
+    queryTwo()
+    queryThree()
+    queryFour()
+    queryFive()
+    querySix()
+    querySeven()
+    queryEight()
+    queryNine()
+    queryTen()
 
 
     sc.stop() // Necessary to close spark cleanly.
@@ -60,42 +62,60 @@ object Project2 {
     val rddFromFile = spark.sparkContext.textFile("input/covid-data.csv") // Read CSV file
     val rdd = rddFromFile.map(f=>{f.split(",")}) // Skip header
 
-    // This statement creates a DataFrameReader from your file that you wish to pass in. We can infer the schema and retrieve
-    // column names if the first row in your csv file has the column names. If not wanted, remove those options. This can
-    // then be
-    // val output = spark.read
-    //   .format("csv")
-    //   .option("inferSchema", "true")
-    //   .option("header", "true")
-    //   .load("input/covid-data.csv")
-    // output.limit(15).show() // Prints out the first 15 lines of the dataframe
+    /*
+     * This statement creates a DataFrameReader from your file that you wish to pass in. 
+     * We can infer the schema and retrieve column names if the first row in your csv
+     * file has the column names. If not wanted, remove those options.
+     */ 
+     
+
+    /*
+    val output = spark.read
+      .format("csv")
+      .option("inferSchema", "true")
+      .option("header", "true")
+      .load("input/covid-data.csv")
+    output.limit(15).show() // Prints out the first 15 lines of the dataframe
+    */
   }
 
-  def top10DeathRates(): Unit = {
+  def queryOne(): Unit = {
     
   }
 
-  def maxDeaths(): Unit = {
+  def queryTwo(): Unit = {
     
   }
 
-  def mostVaxxed(): Unit = {
+  def queryThree(): Unit = {
     
   }
 
-  def leastVaxxed(): Unit = {
+  def queryFour(): Unit = {
     
   }
 
-  def leastDeaths(): Unit = {
+  def queryFive(): Unit = {
     
   }
 
-  def oldestPop(): Unit = {
+  def querySix(): Unit = {
     
   }
 
-  def youngestPop(): Unit = {
+  def querySeven(): Unit = {
+    
+  }
+
+  def queryEight(): Unit = {
+    
+  }
+
+  def queryNine(): Unit = {
+    
+  }
+
+  def queryTen(): Unit = {
     
   }
 }
