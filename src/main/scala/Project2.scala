@@ -10,7 +10,7 @@ import java.util.Scanner
 
 object Project2 {
   def main(args: Array[String]): Unit = {
-//added a comment
+
     val spark = SparkSession.builder
     .master("local[*]")
     .appName("Project2")
