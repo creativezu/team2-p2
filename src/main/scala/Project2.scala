@@ -16,20 +16,20 @@ object Project2 {
     .appName("Team 2 Project 2")
     .getOrCreate()
 
-    // This block of code is all necessary for spark/hive/hadoop (WINDOWS)
+    // This code is necessary for windows-based spark/hive/hadoop environments
     System.setSecurityManager(null)
-    /*System.setProperty(
+    /*
+      System.setProperty(
       "hadoop.home.dir",
       "C:\\hadoop\\"
-    ) */ // change if winutils.exe is in a different bin folder
+    ) 
+    */ 
 
     val conf = new SparkConf()
       .setMaster("local")
       .setAppName("Project2") // Change to whatever app name you want
     val sc = new SparkContext(conf)
     sc.setLogLevel("ERROR")
-    val hiveCtx = new HiveContext(sc)
-    import hiveCtx.implicits._
 
     
     /*
