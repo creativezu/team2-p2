@@ -1,42 +1,27 @@
-import org.apache.spark.sql.hive.HiveContext
+import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.SparkConf
-import org.apache.spark.SparkContext
-import org.apache.spark.SparkContext._
-import org.apache.spark.sql.SQLContext
-import java.sql.DriverManager
-import java.sql.Connection
-import java.util.Scanner
 
 object Project2 {
-  def main(args: Array[String]): Unit = {
+  def main(args:Array[String]): Unit = {
+        val spark = SparkSession
+                    .builder
+                    .appName("SparkVSCode")
+                    .config("spark.master", "local")
+                    .getOrCreate()
 
-    val spark = SparkSession.builder
-    .master("local[*]")
-    .appName("Project2")
-    .getOrCreate()
+    spark.sparkContext.setLogLevel("ERROR")
+    import spark.implicits._
 
-    // This code is necessary for windows-based spark/hive/hadoop environments
-    System.setSecurityManager(null)
-    /*
-      System.setProperty(
-      "hadoop.home.dir",
-      "C:\\hadoop\\"
-    ) 
-    */ 
+    val rdd = spark.sparkContext.parallelize(Array((1, "a"), (2, "b"), (3, "c")))
 
-    val conf = new SparkConf()
-      .setMaster("local")
-      .setAppName("Project2") // Change to whatever app name you want
-    val sc = new SparkContext(conf)
-    sc.setLogLevel("ERROR")
+    val df = rdd.toDF("num", "str")
 
-    
-    /*
-     * Here is where we might take
-     * in an input from user
-     */
+    rdd.collect.foreach(println)
+    df.printSchema
+    df.show
+    df.select("*").where($"num" > 1).show
 
+    spark.stop() // Necessary to close spark cleanly.
 
 
     queryOne()
@@ -66,16 +51,7 @@ object Project2 {
      * We can infer the schema and retrieve column names if the first row in your csv
      * file has the column names. If not wanted, remove those options.
      */ 
-     
-
-    /*
-    val output = spark.read
-      .format("csv")
-      .option("inferSchema", "true")
-      .option("header", "true")
-      .load("input/covid-data.csv")
-    output.limit(15).show() // Prints out the first 15 lines of the dataframe
-    */
+    
   }
 
   def queryOne(): Unit = {
