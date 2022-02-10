@@ -35,7 +35,6 @@ object Project2 {
     /*
      * Here is where we might take
      * in an input from user
-     *
      */
 
 
