@@ -28,7 +28,7 @@ object Project2 {
     querySix(spark)
     querySeven(spark)
     queryEight(spark)
-    queryNine()
+    queryNine(spark)
     queryTen()
 
 
@@ -73,8 +73,9 @@ object Project2 {
     df.select("location","total_cases").where(col("continent") === "Oceania").groupBy("location").agg(max("total_cases")).distinct().show()
   }
 
-  def queryNine(): Unit = {
-
+  def queryNine(spark: SparkSession): Unit = {
+    // Selects TOTAL DEATHS
+    df.select("location","total_deaths").groupBy("location").agg(max("total_deaths")).distinct().show()
   }
 
   def queryTen(): Unit = {
