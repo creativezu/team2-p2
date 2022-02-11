@@ -46,19 +46,20 @@ object Project2 {
   }
 
   def queryTwo(spark: SparkSession): Unit = {
-    // Load in covid-data.csv
-    val df = spark.read.format("com.databricks.spark.csv").option("header", true).load("input/covid-data.csv")
 
-    // Selects MAX cases in 'Asia' 
-    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).show()
-  }
-
-  def queryThree(spark: SparkSession): Unit = {
     // Load in covid-data.csv
     val df = spark.read.format("com.databricks.spark.csv").option("header", true).load("input/covid-data.csv")
 
     // Selects TOTAL DISTINCT CASES in 'Asia' 
     df.select("location","total_cases").where(col("continent") === "Asia").groupBy("location").agg(max("total_cases")).distinct().show()
+   
+  }
+
+  def queryThree(spark: SparkSession): Unit = {
+    // Load in covid-data.csv
+    val df = spark.read.format("com.databricks.spark.csv").option("header", true).load("input/covid-data.csv")
+    // Selects MAX cases in 'Aisia' 
+    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).where(col("continent") === "Asia").show()
   }
 
   def queryFour(spark: SparkSession): Unit = {
