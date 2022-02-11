@@ -46,57 +46,59 @@ object Project2 {
   }
 
   def queryTwo(spark: SparkSession): Unit = {
-
     // Load in covid-data.csv
     val df = spark.read.format("com.databricks.spark.csv").option("header", true).load("input/covid-data.csv")
 
-    // Selects TOTAL DISTINCT CASES in 'Asia' 
-    df.select("location","total_cases").where(col("continent") === "Asia").groupBy("location").agg(max("total_cases")).distinct().show()
-   
+    // Selects MAX cases in 'Asia' 
+    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).where(col("continent") === "Asia").show()
   }
 
   def queryThree(spark: SparkSession): Unit = {
     // Load in covid-data.csv
     val df = spark.read.format("com.databricks.spark.csv").option("header", true).load("input/covid-data.csv")
 
-    // Selects MAX cases in 'Asia' 
-    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).where(col("continent") === "Asia").show()
-
+    // Selects TOTAL DISTINCT CASES in 'Asia' 
+    df.select("location","total_cases").where(col("continent") === "Asia").groupBy("location").agg(max("total_cases")).distinct().show()
   }
 
   def queryFour(spark: SparkSession): Unit = {
+    // Load in covid-data.csv
     val df = spark.read.format("com.databricks.spark.csv").option("header", true).load("input/covid-data.csv")
 
-    // Selects MAX cases in 'Africa' 
-    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).where(col("continent") === "Africa").show()
+    // Selects TOTAL DISTINCT CASES in 'Africa' 
+    df.select("location","total_cases").where(col("continent") === "Africa").groupBy("location").agg(max("total_cases")).distinct().show()
   }
 
   def queryFive(spark: SparkSession): Unit = {
+    // Load in covid-data.csv
     val df = spark.read.format("com.databricks.spark.csv").option("header", true).load("input/covid-data.csv")
 
-    // Selects MAX cases in 'Europe' 
-    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).where(col("continent") === "Europe").show()
+    // Selects TOTAL DISTINCT CASES in 'Europe' 
+    df.select("location","total_cases").where(col("continent") === "Europe").groupBy("location").agg(max("total_cases")).distinct().show()
   }
 
   def querySix(spark: SparkSession): Unit = {
+    // Load in covid-data.csv
     val df = spark.read.format("com.databricks.spark.csv").option("header", true).load("input/covid-data.csv")
 
-    // Selects MAX cases in 'North America' 
-    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).where(col("continent") === "North America").show()
+    // Selects TOTAL DISTINCT CASES in 'North America' 
+    df.select("location","total_cases").where(col("continent") === "North America").groupBy("location").agg(max("total_cases")).distinct().show()
   }
 
   def querySeven(spark: SparkSession): Unit = {
+    // Load in covid-data.csv
     val df = spark.read.format("com.databricks.spark.csv").option("header", true).load("input/covid-data.csv")
 
-    // Selects MAX cases in 'South America' 
-    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).where(col("continent") === "South America").show()
+    // Selects TOTAL DISTINCT CASES in 'South America' 
+    df.select("location","total_cases").where(col("continent") === "South America").groupBy("location").agg(max("total_cases")).distinct().show()
   }
 
   def queryEight(spark: SparkSession): Unit = {
+    // Load in covid-data.csv
     val df = spark.read.format("com.databricks.spark.csv").option("header", true).load("input/covid-data.csv")
 
-    // Selects MAX cases in 'Oceania' 
-    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).where(col("continent") === "Oceania").show()
+    // Selects TOTAL DISTINCT CASES in 'Oceania' 
+    df.select("location","total_cases").where(col("continent") === "Oceania").groupBy("location").agg(max("total_cases")).distinct().show()
   }
 
   def queryNine(): Unit = {
