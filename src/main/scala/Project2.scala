@@ -50,7 +50,7 @@ object Project2 {
     val df = spark.read.format("com.databricks.spark.csv").option("header", true).load("input/covid-data.csv")
 
     // Selects MAX cases in 'Asia' 
-    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).where(col("continent") === "Asia").show()
+    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).show()
   }
 
   def queryThree(spark: SparkSession): Unit = {
