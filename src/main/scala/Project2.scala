@@ -44,31 +44,37 @@ object Project2 {
   }
 
   def queryThree(spark: SparkSession): Unit = {
+    println("Asia")
     // Selects TOTAL DISTINCT CASES in 'Asia' 
     df.select("location","total_cases").where(col("continent") === "Asia").groupBy("location").agg(max("total_cases")).distinct().show()
   }
 
   def queryFour(spark: SparkSession): Unit = {
+    println("Africa")
     // Selects TOTAL DISTINCT CASES in 'Africa' 
     df.select("location","total_cases").where(col("continent") === "Africa").groupBy("location").agg(max("total_cases")).distinct().show()
   }
 
   def queryFive(spark: SparkSession): Unit = {
+    println("Europe")
     // Selects TOTAL DISTINCT CASES in 'Europe' 
     df.select("location","total_cases").where(col("continent") === "Europe").groupBy("location").agg(max("total_cases")).distinct().show()
   }
 
   def querySix(spark: SparkSession): Unit = {
+    println("North America")
     // Selects TOTAL DISTINCT CASES in 'North America' 
     df.select("location","total_cases").where(col("continent") === "North America").groupBy("location").agg(max("total_cases")).distinct().show()
   }
 
   def querySeven(spark: SparkSession): Unit = {
+    println("South America")
     // Selects TOTAL DISTINCT CASES in 'South America' 
     df.select("location","total_cases").where(col("continent") === "South America").groupBy("location").agg(max("total_cases")).distinct().show()
   }
 
   def queryEight(spark: SparkSession): Unit = {
+    println("Oceania")
     // Selects TOTAL DISTINCT CASES in 'Oceania' 
     df.select("location","total_cases").where(col("continent") === "Oceania").groupBy("location").agg(max("total_cases")).distinct().show()
   }
