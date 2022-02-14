@@ -756,3 +756,70 @@ Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException:
 	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
 	... 9 more
 
+2022.02.14 08:05:03 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at e:\Big-Data\team2-p2\.metals\lsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.02.14 08:05:04 INFO  logging to file E:\Big-Data\team2-p2\.metals\metals.log
+2022.02.14 08:05:04 INFO  Started: Metals version 0.11.1 in workspace 'E:\Big-Data\team2-p2' for client Visual Studio Code 1.64.2.
+2022.02.14 08:05:04 INFO  Parse release: 1.8.0_292
+2022.02.14 08:05:05 INFO  time: initialize in 0.98s
+2022.02.14 08:05:09 INFO  Attempting to connect to the build server...
+2022.02.14 08:05:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\team2-p2\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.14 08:05:09 INFO  Attempting to connect to the build server...
+2022.02.14 08:05:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\team2-p2\project\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.14 08:05:09 INFO  time: Connected to build server in 0.2s
+2022.02.14 08:05:09 INFO  Connected to Build server: Bloop v1.4.12
+2022.02.14 08:05:11 INFO  running 'C:\Users\Work\.jabba\jdk\adopt@1.8.0-292\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\Work\AppData\Local\Temp\metals3914703558980575908\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2022.02.14 08:05:13 INFO  [info] welcome to sbt 1.5.4 (AdoptOpenJDK Java 1.8.0_292)
+2022.02.14 08:05:14 INFO  [info] loading settings for project team2-p2-build-build from metals.sbt ...
+2022.02.14 08:05:14 INFO  [info] loading project definition from E:\Big-Data\team2-p2\project\project
+2022.02.14 08:05:15 INFO  [info] loading settings for project team2-p2-build from metals.sbt ...
+2022.02.14 08:05:15 INFO  [info] loading project definition from E:\Big-Data\team2-p2\project
+2022.02.14 08:05:17 INFO  time: indexed workspace in 7.22s
+2022.02.14 08:05:17 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 08:05:17 INFO  [success] Generated .bloop\team2-p2-build.json
+2022.02.14 08:05:17 INFO  [success] Total time: 2 s, completed Feb 14, 2022 8:05:17 AM
+2022.02.14 08:05:17 INFO  [info] loading settings for project team2-p2 from build.sbt ...
+2022.02.14 08:05:17 INFO  [info] set current project to Project1Ex (in build file:/E:/Big-Data/team2-p2/)
+2022.02.14 08:05:18 INFO  time: compiled team2-p2 in 1.69s
+2022.02.14 08:05:20 INFO  [success] Generated .bloop\team2-p2.json
+2022.02.14 08:05:20 INFO  [success] Generated .bloop\team2-p2-test.json
+2022.02.14 08:05:20 INFO  [success] Total time: 3 s, completed Feb 14, 2022 8:05:20 AM
+2022.02.14 08:05:20 INFO  time: ran 'sbt bloopInstall' in 9.04s
+2022.02.14 08:05:20 INFO  Disconnecting from Bloop session...
+2022.02.14 08:05:20 INFO  Shut down connection with build server.
+2022.02.14 08:05:21 INFO  Shut down connection with build server.
+2022.02.14 08:05:21 INFO  Attempting to connect to the build server...
+2022.02.14 08:05:20 ERROR Unexpected error initializing server
+scala.meta.internal.metals.MetalsBspException: BSP connection failed in the attempt to get: CompileResult.  Boxed InterruptedException
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.$anonfun$applyOrElse$4(BuildServerConnection.scala:282)
+	at scala.Option.getOrElse(Option.scala:189)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:280)
+	at scala.meta.internal.metals.BuildServerConnection$$anonfun$1.applyOrElse(BuildServerConnection.scala:268)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022.02.14 08:05:20 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\team2-p2\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.14 08:05:20 INFO  Attempting to connect to the build server...
+2022.02.14 08:05:20 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\team2-p2\project\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.14 08:05:20 INFO  time: Connected to build server in 84ms
+2022.02.14 08:05:20 INFO  Connected to Build server: Bloop v1.4.12
+2022.02.14 08:05:23 INFO  time: indexed workspace in 2.41s
+2022.02.14 08:08:17 INFO  shutting down Metals
+2022.02.14 08:08:17 INFO  Shut down connection with build server.
+2022.02.14 08:08:17 INFO  Shut down connection with build server.
+2022.02.14 08:08:24 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at e:\Big-Data\team2-p2\.metals\lsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.02.14 08:08:24 INFO  logging to file E:\Big-Data\team2-p2\.metals\metals.log
+2022.02.14 08:08:24 INFO  Started: Metals version 0.11.1 in workspace 'E:\Big-Data\team2-p2' for client Visual Studio Code 1.64.2.
+2022.02.14 08:08:24 INFO  Parse release: 1.8.0_292
+2022.02.14 08:08:25 INFO  time: initialize in 0.98s
+2022.02.14 08:08:26 INFO  Attempting to connect to the build server...
+2022.02.14 08:08:25 INFO  skipping build import with status 'Installed'
+2022.02.14 08:08:26 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\team2-p2\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.14 08:08:26 INFO  Attempting to connect to the build server...
+2022.02.14 08:08:26 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\team2-p2\project\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.14 08:08:26 INFO  time: Connected to build server in 0.19s
+2022.02.14 08:08:26 INFO  Connected to Build server: Bloop v1.4.12
+2022.02.14 08:08:30 INFO  time: indexed workspace in 4.33s
