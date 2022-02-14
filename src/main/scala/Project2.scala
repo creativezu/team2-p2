@@ -246,13 +246,13 @@ object Project2 {
       spark.sql("SELECT * FROM df")
 
       println("Vaccination Rate compared to Death Rate")
-      spark
+      val q10 = spark
         .sql(
           "SELECT date, people_fully_vaccinated/population AS vaccination_rate, total_deaths/total_cases AS death_rate FROM df WHERE location = \"United States\" AND date LIKE(\"%/1/2021%\") ORDER BY vaccination_rate DESC LIMIT 10"
         )
-        .show()
+      q10.show()
 
-      result.write.mode("overwrite").csv("output/queryTen")
+      q10.write.mode("overwrite").csv("output/queryTen")
     }
   }
 }
