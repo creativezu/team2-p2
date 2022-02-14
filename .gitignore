@@ -10,3 +10,5 @@ target
 covid-data.csv
 README.md
 project
+output
+.scalafmt.conf
