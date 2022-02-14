@@ -29,7 +29,7 @@ object Project2 {
     // querySeven(spark)
     // queryEight(spark)
     // queryNine(spark)
-    queryTen(spark)
+    // queryTen(spark)
 
 
     spark.stop() // Necessary to close spark cleanly.

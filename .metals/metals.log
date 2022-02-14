@@ -1072,3 +1072,32 @@ WARNING: Unmatched cancel notification for request id 305
 2022.02.14 11:20:40 INFO  compiling team2-p2 (1 scala source)
 2022.02.14 11:30:41 INFO  compiling team2-p2 (1 scala source)
 2022.02.14 11:30:41 INFO  time: compiled team2-p2 in 0.4s
+2022.02.14 11:43:16 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 11:43:16 INFO  time: compiled team2-p2 in 0.98s
+2022.02.14 11:47:12 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 11:47:12 INFO  time: compiled team2-p2 in 0.95s
+2022.02.14 11:47:47 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 11:47:47 INFO  time: compiled team2-p2 in 0.85s
+2022.02.14 11:50:10 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 11:50:11 INFO  time: compiled team2-p2 in 1.03s
+2022.02.14 11:51:44 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 11:51:44 INFO  time: compiled team2-p2 in 0.9s
+2022.02.14 11:57:59 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 11:57:59 INFO  time: compiled team2-p2 in 0.8s
+2022.02.14 11:58:29 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 11:58:29 INFO  time: compiled team2-p2 in 0.75s
+Feb 14, 2022 11:59:27 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1613
+2022.02.14 12:04:12 WARN  Could not load snapshot text for E:\Big-Data\team2-p2\src\main\scala\Project2.scala
+2022.02.14 12:04:12 WARN  Could not load snapshot text for E:\Big-Data\team2-p2\src\main\scala\Project2.scala
+2022.02.14 12:04:12 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 12:04:13 WARN  Could not load snapshot text for E:\Big-Data\team2-p2\src\main\scala\Project2.scala
+2022.02.14 12:04:12 INFO  time: compiled team2-p2 in 0.81s
+2022.02.14 12:19:27 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 12:19:28 INFO  time: compiled team2-p2 in 1.34s
+Feb 14, 2022 12:20:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1975
+2022.02.14 12:21:07 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 12:21:07 WARN  Could not load snapshot text for E:\Big-Data\team2-p2\src\main\scala\Project2.scala
+2022.02.14 12:21:07 WARN  Could not load snapshot text for E:\Big-Data\team2-p2\src\main\scala\Project2.scala
+2022.02.14 12:21:07 INFO  time: compiled team2-p2 in 0.9s
