@@ -79,7 +79,8 @@ object Project2 {
   }
 
   def queryTen(spark: SparkSession): Unit = {
-    spark.sql("SELECT date, people_fully_vaccinated/population AS vaccination_rate, total_deaths/total_cases AS death_rate FROM covid-data WHERE location = \"United States\" ORDER BY date GROUP BY vaccination_rate DESC LIMIT 10")
+    spark.sql("SELECT date, people_fully_vaccinated/population AS vaccination_rate, total_deaths/total_cases AS death_rate FROM df WHERE location = \"United States\" GROUP BY vaccination_rate ORDER BY date DESC LIMIT 10")
+    df.select("date", "people_fully_vaccinated/population", "total_deaths/total_cases").groupBy("people_fully_vaccinated/population").orderBy("date")
   }
 }
 }
