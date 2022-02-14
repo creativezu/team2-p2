@@ -1115,3 +1115,13 @@ WARNING: Unmatched cancel notification for request id 1975
 2022.02.14 12:51:13 INFO  time: compiled team2-p2 in 0.79s
 2022.02.14 12:51:56 INFO  compiling team2-p2 (1 scala source)
 2022.02.14 12:51:56 INFO  time: compiled team2-p2 in 0.79s
+2022.02.14 12:58:47 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 12:58:47 INFO  time: compiled team2-p2 in 0.91s
+2022.02.14 12:59:34 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 12:59:34 INFO  time: compiled team2-p2 in 0.77s
+2022.02.14 13:02:16 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 13:02:16 INFO  time: compiled team2-p2 in 0.82s
+2022.02.14 13:03:09 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 13:03:09 INFO  time: compiled team2-p2 in 0.81s
+2022.02.14 13:04:31 INFO  compiling team2-p2 (1 scala source)
+2022.02.14 13:04:31 INFO  time: compiled team2-p2 in 0.95s
