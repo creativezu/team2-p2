@@ -20,15 +20,15 @@ object Project2 {
     val df = spark.read.format("com.databricks.spark.csv").option("header", true).load("input/covid-data.csv")
 
     // Feel free to rename these functions
-    queryOne(spark)
-    queryTwo(spark)
-    queryThree(spark)
-    queryFour(spark)
-    queryFive(spark)
-    querySix(spark)
-    querySeven(spark)
-    queryEight(spark)
-    queryNine(spark)
+    // queryOne(spark)
+    // queryTwo(spark)
+    // queryThree(spark)
+    // queryFour(spark)
+    // queryFive(spark)
+    // querySix(spark)
+    // querySeven(spark)
+    // queryEight(spark)
+    // queryNine(spark)
     queryTen(spark)
 
 
@@ -79,8 +79,11 @@ object Project2 {
   }
 
   def queryTen(spark: SparkSession): Unit = {
-    spark.sql("SELECT date, people_fully_vaccinated/population AS vaccination_rate, total_deaths/total_cases AS death_rate FROM df WHERE location = \"United States\" GROUP BY vaccination_rate ORDER BY date DESC LIMIT 10")
-    df.select("date", "people_fully_vaccinated/population", "total_deaths/total_cases").groupBy("people_fully_vaccinated/population").orderBy("date")
+    df.createOrReplaceTempView("df")
+    spark.sql("SELECT * FROM df")
+
+    println("Vaccination Rate compared to Death Rate")
+    spark.sql("SELECT date, people_fully_vaccinated/population AS vaccination_rate, total_deaths/total_cases AS death_rate FROM df WHERE location = \"United States\" AND date LIKE(\"%/1/2021%\") ORDER BY vaccination_rate DESC LIMIT 10").show()
   }
 }
 }
