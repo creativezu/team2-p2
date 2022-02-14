@@ -10,3 +10,6 @@ target
 covid-data.csv
 README.md
 project
+.metals/metals.lock.db
+output
+.scalafmt.conf
