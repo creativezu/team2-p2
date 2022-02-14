@@ -29,7 +29,7 @@ object Project2 {
     querySeven(spark)
     queryEight(spark)
     queryNine(spark)
-    queryTen()
+    queryTen(spark)
 
     spark.stop() // Necessary to close spark cleanly.
     def queryOne(spark: SparkSession): Unit = {
@@ -241,6 +241,18 @@ object Project2 {
         .save("output/queryNine")
     }
 
-    def queryTen(): Unit = {}
+    def queryTen(spark: SparkSession): Unit = {
+      df.createOrReplaceTempView("df")
+      spark.sql("SELECT * FROM df")
+
+      println("Vaccination Rate compared to Death Rate")
+      spark
+        .sql(
+          "SELECT date, people_fully_vaccinated/population AS vaccination_rate, total_deaths/total_cases AS death_rate FROM df WHERE location = \"United States\" AND date LIKE(\"%/1/2021%\") ORDER BY vaccination_rate DESC LIMIT 10"
+        )
+        .show()
+
+      result.write.mode("overwrite").csv("output/queryTen")
+    }
   }
 }
