@@ -79,7 +79,7 @@ object Project2 {
   }
 
   def queryTen(): Unit = {
-//comment
+
   }
 }
 }
