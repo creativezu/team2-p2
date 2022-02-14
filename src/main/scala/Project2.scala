@@ -29,7 +29,7 @@ object Project2 {
     querySeven(spark)
     queryEight(spark)
     queryNine(spark)
-    queryTen()
+    queryTen(spark)
 
 
     spark.stop() // Necessary to close spark cleanly.
@@ -78,8 +78,8 @@ object Project2 {
     df.select("location","total_deaths").groupBy("location").agg(max("total_deaths")).distinct().show()
   }
 
-  def queryTen(): Unit = {
-
+  def queryTen(spark: SparkSession): Unit = {
+    spark.sql("SELECT date, people_fully_vaccinated/population AS vaccination_rate, total_deaths/total_cases AS death_rate FROM covid-data WHERE location = \"United States\" ORDER BY date GROUP BY vaccination_rate DESC LIMIT 10")
   }
 }
 }
