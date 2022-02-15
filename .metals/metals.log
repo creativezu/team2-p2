@@ -1187,3 +1187,15 @@ Feb 15, 2022 12:36:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancella
 WARNING: Unmatched cancel notification for request id 11
 2022.02.15 12:37:02 INFO  compiling team2-p2 (1 scala source)
 2022.02.15 12:37:02 INFO  time: compiled team2-p2 in 0.78s
+2022.02.15 12:37:27 INFO  compiling team2-p2 (1 scala source)
+2022.02.15 12:37:27 INFO  time: compiled team2-p2 in 0.86s
+2022.02.15 12:37:36 INFO  compiling team2-p2 (1 scala source)
+2022.02.15 12:37:36 INFO  time: compiled team2-p2 in 0.84s
+2022.02.15 12:49:00 INFO  compiling team2-p2 (1 scala source)
+2022.02.15 12:49:00 INFO  time: compiled team2-p2 in 0.83s
+2022.02.15 12:49:31 INFO  compiling team2-p2 (1 scala source)
+2022.02.15 12:49:31 INFO  time: compiled team2-p2 in 0.97s
+2022.02.15 12:50:57 INFO  compiling team2-p2 (1 scala source)
+2022.02.15 12:50:57 INFO  time: compiled team2-p2 in 0.79s
+2022.02.15 12:51:34 INFO  compiling team2-p2 (1 scala source)
+2022.02.15 12:51:34 INFO  time: compiled team2-p2 in 0.74s
