@@ -13,3 +13,4 @@ project
 .metals/metals.lock.db
 output
 .scalafmt.conf
+metals.log

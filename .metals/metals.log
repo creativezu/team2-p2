@@ -1130,3 +1130,40 @@ WARNING: Unmatched cancel notification for request id 1975
 2022.02.15 12:30:08 INFO  Started: Metals version 0.11.1 in workspace 'E:\Big-Data\team2-p2' for client Visual Studio Code 1.64.2.
 2022.02.15 12:30:08 INFO  Parse release: 1.8.0_292
 2022.02.15 12:30:09 INFO  time: initialize in 1.04s
+2022.02.15 12:30:10 INFO  Attempting to connect to the build server...
+2022.02.15 12:30:09 INFO  skipping build import with status 'Installed'
+2022.02.15 12:30:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\team2-p2\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.15 12:30:09 INFO  Attempting to connect to the build server...
+2022.02.15 12:30:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\team2-p2\project\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.15 12:30:10 INFO  time: Connected to build server in 0.18s
+2022.02.15 12:30:10 INFO  Connected to Build server: Bloop v1.4.12
+2022.02.15 12:30:11 INFO  no build target found for E:\Big-Data\team2-p2\src\main\scala\Project2.scala. Using presentation compiler with project's scala-library version: 3.1.0
+2022.02.15 12:30:11 INFO  time: code lens generation in 1.55s
+2022.02.15 12:30:11 INFO  time: Imported build in 0.1s
+2022.02.15 12:30:15 INFO  time: indexed workspace in 3.9s
+2022.02.15 12:30:15 INFO  compiling team2-p2 (1 scala source)
+2022.02.15 12:30:15 INFO  time: compiled team2-p2 in 0.96s
+Feb 15, 2022 12:30:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+Exception in thread "pool-4-thread-1" java.lang.Error: java.lang.InterruptedException
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1155)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess$$anonfun$onCompilerJobQueue$1.apply$mcV$sp(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	... 2 more
+Exception in thread "pool-4-thread-2" java.lang.Error: java.lang.InterruptedException
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1155)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess$$anonfun$onCompilerJobQueue$1.apply$mcV$sp(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:139)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	... 2 more
+2022.02.15 12:31:24 INFO  compiling team2-p2 (1 scala source)
+2022.02.15 12:31:24 INFO  time: compiled team2-p2 in 0.87s
