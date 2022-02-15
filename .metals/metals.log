@@ -1167,3 +1167,23 @@ Caused by: java.lang.InterruptedException
 	... 2 more
 2022.02.15 12:31:24 INFO  compiling team2-p2 (1 scala source)
 2022.02.15 12:31:24 INFO  time: compiled team2-p2 in 0.87s
+2022.02.15 12:36:06 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at e:\Big-Data\team2-p2\.metals\lsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.02.15 12:36:07 INFO  logging to file E:\Big-Data\team2-p2\.metals\metals.log
+2022.02.15 12:36:07 INFO  Started: Metals version 0.11.1 in workspace 'E:\Big-Data\team2-p2' for client Visual Studio Code 1.64.2.
+2022.02.15 12:36:07 INFO  Parse release: 1.8.0_292
+2022.02.15 12:36:08 INFO  time: initialize in 1.07s
+2022.02.15 12:36:09 INFO  Attempting to connect to the build server...
+2022.02.15 12:36:08 INFO  skipping build import with status 'Installed'
+2022.02.15 12:36:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\team2-p2\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.15 12:36:09 INFO  Attempting to connect to the build server...
+2022.02.15 12:36:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at E:\Big-Data\team2-p2\project\.metals\bsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2022.02.15 12:36:09 INFO  time: Connected to build server in 0.18s
+2022.02.15 12:36:09 INFO  Connected to Build server: Bloop v1.4.12
+2022.02.15 12:36:10 ERROR code navigation does not work for the file 'E:\Big-Data\team2-p2\src\main\scala\Project2.scala' because the SemanticDB file 'E:\Big-Data\team2-p2\.bloop\team2-p2\bloop-bsp-clients-classes\classes-Metals-Z8gcAByyT6KIUs8pU40psA==\META-INF\semanticdb\src\main\scala\Project2.scala.semanticdb' doesn't exist. There can be many reasons for this error. 
+2022.02.15 12:36:14 INFO  time: indexed workspace in 4.95s
+2022.02.15 12:36:14 INFO  compiling team2-p2 (1 scala source)
+2022.02.15 12:36:14 INFO  time: compiled team2-p2 in 0.84s
+Feb 15, 2022 12:36:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 11
+2022.02.15 12:37:02 INFO  compiling team2-p2 (1 scala source)
+2022.02.15 12:37:02 INFO  time: compiled team2-p2 in 0.78s
