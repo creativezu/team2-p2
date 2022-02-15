@@ -13,4 +13,5 @@ project
 .metals/metals.lock.db
 output
 .scalafmt.conf
-metals.log
+.metals/metals.log
+.metals/metals.h2.db
