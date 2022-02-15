@@ -1125,3 +1125,8 @@ WARNING: Unmatched cancel notification for request id 1975
 2022.02.14 13:03:09 INFO  time: compiled team2-p2 in 0.81s
 2022.02.14 13:04:31 INFO  compiling team2-p2 (1 scala source)
 2022.02.14 13:04:31 INFO  time: compiled team2-p2 in 0.95s
+2022.02.15 12:30:08 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at e:\Big-Data\team2-p2\.metals\lsp.trace.json or C:\Users\Work\AppData\Local\scalameta\metals\cache\lsp.trace.json
+2022.02.15 12:30:08 INFO  logging to file E:\Big-Data\team2-p2\.metals\metals.log
+2022.02.15 12:30:08 INFO  Started: Metals version 0.11.1 in workspace 'E:\Big-Data\team2-p2' for client Visual Studio Code 1.64.2.
+2022.02.15 12:30:08 INFO  Parse release: 1.8.0_292
+2022.02.15 12:30:09 INFO  time: initialize in 1.04s

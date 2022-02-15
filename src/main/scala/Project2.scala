@@ -75,7 +75,7 @@ object Project2 {
 
   def queryNine(spark: SparkSession): Unit = {
     // Selects TOTAL DEATHS
-    df.select("location","total_deaths").groupBy("location").agg(max("total_deaths")).distinct().show()
+    df.select("location","total_deaths").groupBy("location").agg(max("total_deaths")).distinct().na.drop("any").show()
   }
 
   def queryTen(spark: SparkSession): Unit = {
