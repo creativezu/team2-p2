@@ -34,8 +34,8 @@ object Project2 {
 
   }
   def queryOne(spark: SparkSession, df: DataFrame): Unit = {
-    // Selects new_cases (average per day)
-    df.groupBy("location").agg(avg("new_cases")).orderBy("avg(new_cases)").na.drop("any").show(false)
+    // Selects TOTAL CASES
+    df.select("location","total_cases").groupBy("location").agg(max("total_cases")).distinct().na.drop("any").show(false)
   }
 
   def queryTwo(spark: SparkSession, df: DataFrame): Unit = {
@@ -74,8 +74,8 @@ object Project2 {
   }
 
   def queryNine(spark: SparkSession, df: DataFrame): Unit = {
-    // Selects new_deaths (average per day)
-    df.groupBy("location").agg(avg("new_deaths")).orderBy("avg(new_deaths)").na.drop("any").show(false)
+    // Selects TOTAL DEATHS
+    df.select("location","total_deaths").groupBy("location").agg(max("total_deaths")).distinct().na.drop("any").na.drop("any").show(false)
   }
 
   def queryTen(spark: SparkSession, df: DataFrame): Unit = {
