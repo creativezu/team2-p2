@@ -20,16 +20,17 @@ object Project2 {
       .load("input/covid-data.csv")
 
     // Feel free to rename these functions
-    queryOne(spark)
+    // queryOne(spark)
     queryTwo(spark)
-    queryThree(spark)
-    queryFour(spark)
-    queryFive(spark)
-    querySix(spark)
-    querySeven(spark)
-    queryEight(spark)
-    queryNine(spark)
-    queryTen(spark)
+    // queryThree(spark)
+    // queryFour(spark)
+    // queryFive(spark)
+    // querySix(spark)
+    // querySeven(spark)
+    // queryEight(spark)
+    // queryNine(spark)
+    // queryTen(spark)
+    // queryEleven(spark)
 
     spark.stop() // Necessary to close spark cleanly.
     def queryOne(spark: SparkSession): Unit = {
@@ -56,14 +57,14 @@ object Project2 {
 
     def queryTwo(spark: SparkSession): Unit = {
       // Selects MAX cases in 'Asia'
-      df.select("continent", "location", "total_cases")
+      df.select("continent", "location", "total_cases", "date")
         .groupBy("continent")
         .agg(max("total_cases"))
         .show()
 
       val q2 = df
-        .select("continent", "location", "total_cases")
-        .groupBy("continent")
+        .select("continent", "location", "total_cases", "date")
+        .groupBy("continent", "date")
         .agg(max("total_cases").alias("total_cases"))
 
       q2.coalesce(1)
@@ -243,16 +244,38 @@ object Project2 {
 
     def queryTen(spark: SparkSession): Unit = {
       df.createOrReplaceTempView("df")
+
+      println("Vaccination Rate compared to Death Rate:")
+      val q10 =
+        spark.sql(
+          "SELECT date, ROUND((people_fully_vaccinated/population)*100, 2)AS vaccination_rate, ROUND((total_deaths/total_cases)*100, 2) AS death_rate FROM df WHERE location = \"United States\" AND date LIKE(\"%/1/2021%\") ORDER BY vaccination_rate ASC LIMIT 12"
+        )
+
+      q10.show()
+      q10.write.mode("overwrite").csv("output/queryTen")
+
+      df.createOrReplaceTempView("df")
       spark.sql("SELECT * FROM df")
 
-      println("Vaccination Rate compared to Death Rate")
-      val q10 = spark
-        .sql(
-          "SELECT date, people_fully_vaccinated/population AS vaccination_rate, total_deaths/total_cases AS death_rate FROM df WHERE location = \"United States\" AND date LIKE(\"%/1/2021%\") ORDER BY vaccination_rate DESC LIMIT 10"
-        )
-      q10.show()
+    }
 
-      q10.write.mode("overwrite").csv("output/queryTen")
+    def queryEleven(spark: SparkSession): Unit = {
+
+      println("Query 11:")
+
+      val q11 = df
+        .select("location", "date", "total_cases")
+        .groupBy("location", "date")
+        .agg(max("total_cases").alias("total_cases"))
+
+      q11
+        .coalesce(1)
+        .write
+        .format("com.databricks.spark.csv")
+        .mode("overwrite")
+        .option("header", "true")
+        .save("output/queryEleven")
+
     }
   }
 }
