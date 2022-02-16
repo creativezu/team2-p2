@@ -20,7 +20,7 @@ object Project2 {
       .load("input/covid-data.csv")
 
     // Feel free to rename these functions
-    queryOne(spark)
+    // queryOne(spark)
     // queryTwo(spark)
     // queryThree(spark)
     // queryFour(spark)
@@ -32,19 +32,25 @@ object Project2 {
     // queryTen(spark)
     // queryEleven(spark)
     // queryTwelve(spark)
+    // queryThirteen(spark)
+    // queryFourteen(spark)
+    // queryFifteen(spark)
+    // querySixteen(spark)
+    querySeventeen(spark)
 
     spark.stop() // Necessary to close spark cleanly.
     def queryOne(spark: SparkSession): Unit = {
       // Selects TOTAL CASES
-      df.select("location", "total_cases", "date")
-        .groupBy("location", "date")
-        .agg(max("total_cases").alias("total_cases"))
-        .distinct()
-        .show()
+
+      // df.select("location", "total_cases", "date")
+      //   .groupBy("location", "date")
+      //   .agg(max("total_cases").alias("total_cases"))
+      //   .distinct()
+      //   .show()
 
       var q1 = df
-        .select("location", "total_cases", "date")
-        .groupBy("location", "date")
+        .select("location", "total_cases")
+        .groupBy("location")
         .agg(max("total_cases").alias("total_cases"))
         .distinct()
 
@@ -294,6 +300,100 @@ object Project2 {
 
       q12.show()
       q12.write.mode("overwrite").csv("output/queryTwelve")
+    }
+
+    def queryThirteen(spark: SparkSession): Unit = {
+      df.createOrReplaceTempView("df")
+
+      println("Query 13:")
+      val q13 =
+        spark.sql(
+          "SELECT location, date, population, total_cases, (total_cases/population)*100 AS death_percentage FROM df WHERE location LIKE(\"%States%\") AND date LIKE(\"%2021%\") ORDER BY date"
+        )
+
+      q13.show()
+      q13
+        .coalesce(1)
+        .write
+        .mode("overwrite")
+        .format("com.databricks.spark.csv")
+        .save("output/queryThirteen")
+    }
+
+    def queryFourteen(spark: SparkSession): Unit = {
+      df.createOrReplaceTempView("df")
+
+      println("Query 14:")
+      val q14 =
+        spark.sql(
+          "SELECT location, population, MAX(total_cases) AS highest_infection_count, MAX((total_cases/population))*100 AS percentage_of_population_infected FROM df GROUP BY location, population ORDER BY percentage_of_population_infected DESC LIMIT 20"
+        )
+
+      q14.show()
+      q14
+        .coalesce(1)
+        .write
+        .mode("overwrite")
+        .format("com.databricks.spark.csv")
+        .option("header", "true")
+        .save("output/queryFourteen")
+    }
+
+    def queryFifteen(spark: SparkSession): Unit = {
+      df.createOrReplaceTempView("df")
+
+      println("Query 15: Total Death Count by location")
+      val q15 =
+        spark.sql(
+          "SELECT location, MAX(cast(total_deaths as int)) AS total_death_count FROM df WHERE continent is not null GROUP BY location ORDER BY total_death_count DESC"
+        )
+
+      q15.show()
+      q15
+        .coalesce(1)
+        .write
+        .mode("overwrite")
+        .format("com.databricks.spark.csv")
+        .option("header", "true")
+        .save("output/queryFifteen")
+    }
+
+    def querySixteen(spark: SparkSession): Unit = {
+      df.createOrReplaceTempView("df")
+
+      println("Query 16: Total Death Count by Continent")
+      val q16 =
+        spark.sql(
+          "SELECT continent, MAX(cast(total_deaths as int)) AS total_death_count FROM df WHERE continent is not null GROUP BY continent ORDER BY total_death_count DESC"
+        )
+
+      q16.show()
+      q16
+        .coalesce(1)
+        .write
+        .mode("overwrite")
+        .format("com.databricks.spark.csv")
+        .option("header", "true")
+        .save("output/querySixteen")
+    }
+
+    def querySeventeen(spark: SparkSession): Unit = {
+      df.createOrReplaceTempView("df")
+
+      println("Query 17: Global numbers")
+      val q17 =
+        spark.sql(
+          "SELECT date, SUM(new_cases) total_cases, SUM(cast(new_deaths as int)) total_deaths, SUM(cast(new_deaths as int))/SUM(new_cases)*100 AS death_percentage FROM df WHERE NOT (continent is null OR total_cases is null) GROUP BY date ORDER BY death_percentage"
+        )
+
+      q17.show()
+      q17
+        .coalesce(1)
+        .write
+        .mode("overwrite")
+        .format("com.databricks.spark.csv")
+        .option("header", "true")
+        .save("output/querySeventeen")
     }
   }
 }
