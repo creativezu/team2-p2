@@ -20,8 +20,8 @@ object Project2 {
       .load("input/covid-data.csv")
 
     // Feel free to rename these functions
-    // queryOne(spark)
-    queryTwo(spark)
+    queryOne(spark)
+    // queryTwo(spark)
     // queryThree(spark)
     // queryFour(spark)
     // queryFive(spark)
@@ -31,19 +31,20 @@ object Project2 {
     // queryNine(spark)
     // queryTen(spark)
     // queryEleven(spark)
+    // queryTwelve(spark)
 
     spark.stop() // Necessary to close spark cleanly.
     def queryOne(spark: SparkSession): Unit = {
       // Selects TOTAL CASES
-      df.select("location", "total_cases")
-        .groupBy("location")
+      df.select("location", "total_cases", "date")
+        .groupBy("location", "date")
         .agg(max("total_cases").alias("total_cases"))
         .distinct()
         .show()
 
       var q1 = df
-        .select("location", "total_cases")
-        .groupBy("location")
+        .select("location", "total_cases", "date")
+        .groupBy("location", "date")
         .agg(max("total_cases").alias("total_cases"))
         .distinct()
 
@@ -58,14 +59,18 @@ object Project2 {
     def queryTwo(spark: SparkSession): Unit = {
       // Selects MAX cases in 'Asia'
       df.select("continent", "location", "total_cases", "date")
-        .groupBy("continent")
+        .groupBy("continent", "date")
         .agg(max("total_cases"))
-        .show()
+        .na
+        .drop("any")
+        .show(false)
 
       val q2 = df
         .select("continent", "location", "total_cases", "date")
         .groupBy("continent", "date")
         .agg(max("total_cases").alias("total_cases"))
+        .na
+        .drop("any")
 
       q2.coalesce(1)
         .write
@@ -276,6 +281,19 @@ object Project2 {
         .option("header", "true")
         .save("output/queryEleven")
 
+    }
+
+    def queryTwelve(spark: SparkSession): Unit = {
+      df.createOrReplaceTempView("df")
+
+      println("Q 12:")
+      val q12 =
+        spark.sql(
+          "SELECT DISTINCT location FROM df WHERE date LIKE(\"%/2021%\") ORDER BY location"
+        )
+
+      q12.show()
+      q12.write.mode("overwrite").csv("output/queryTwelve")
     }
   }
 }
