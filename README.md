@@ -1,3 +1,6 @@
+# team2-p2
+Team 2 Project 2 Alvin, Chris, Taiyewo
+
 Requirements:
 - Create a Spark Application that processes COVID data
 - Your project 2 pitch should involve some analysis of COVID data. This is the central feature. 
@@ -16,7 +19,6 @@ Requirements:
 - We'll have 15 minutes per group, so make sure your presentation can be covered in that time, focusing on the parts of your analysis you find most interesting.
 - Include a link to your github repository at the end of your slides
 
-
 ### Technologies
 
 - Apache Spark
@@ -31,3 +33,5 @@ Requirements:
 
 ### Due Date
 - Presentations will take place on Thursday, 2/17
+
+SELECT DISTINCT location, MAX(total_cases) cases FROM covid-data GROUP BY location ORDER BY cases DESC LIMIT 10
