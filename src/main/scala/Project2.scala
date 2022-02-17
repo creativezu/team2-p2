@@ -26,7 +26,7 @@ object Project2 {
     // queryFive(spark, df)
     // querySix(spark, df)
     // querySeven(spark, df)
-    // queryEight(spark, df)
+    queryEight(spark, df)
     // queryNine(spark, df)
     // queryTen(spark, df)
 
@@ -39,8 +39,8 @@ object Project2 {
   }
 
   def queryTwo(spark: SparkSession, df: DataFrame): Unit = {
-    // Selects MAX cases in 'Asia' 
-    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).na.drop("any").show(false)
+    // Selects TOTAL DEATHS
+    df.select("location","total_deaths").groupBy("location").agg(max("total_deaths")).distinct().na.drop("any").na.drop("any").show(false)
   }
 
   def queryThree(spark: SparkSession, df: DataFrame): Unit = {
@@ -70,12 +70,13 @@ object Project2 {
 
   def queryEight(spark: SparkSession, df: DataFrame): Unit = {
     // Selects TOTAL DISTINCT CASES in 'Oceania' 
-    df.select("location","total_cases").where(col("continent") === "Oceania").groupBy("location").agg(max("total_cases")).distinct().na.drop("any").show(false)
+    // df.select("location","total_cases").where(col("continent") === "Oceania").groupBy("location").agg(max("total_cases")).distinct().na.drop("any").show(false)
+    df.select("continent","location","new_cases").groupBy("continent").agg(sum("new_cases")).na.drop("any").show(false)
   }
 
   def queryNine(spark: SparkSession, df: DataFrame): Unit = {
-    // Selects TOTAL DEATHS
-    df.select("location","total_deaths").groupBy("location").agg(max("total_deaths")).distinct().na.drop("any").na.drop("any").show(false)
+    // Selects MAX cases in 'Asia' 
+    df.select("continent","location","total_cases").groupBy("continent").agg(max("total_cases")).na.drop("any").show(false)
   }
 
   def queryTen(spark: SparkSession, df: DataFrame): Unit = {
