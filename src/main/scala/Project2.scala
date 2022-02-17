@@ -29,6 +29,9 @@ object Project2 {
     // queryEight(spark, df)
     // queryNine(spark, df)
     // queryTen(spark, df)
+    // queryEleven(spark, df)
+    // queryTwelve(spark, df)
+    // queryThirteen(spark, df)
 
     spark.stop()
 
@@ -149,5 +152,62 @@ object Project2 {
         "SELECT date, ROUND((people_fully_vaccinated/population)*100, 2)AS vaccination_rate, ROUND((total_deaths/total_cases)*100, 2) AS death_rate FROM df WHERE location = \"United States\" AND date LIKE(\"%/1/2021%\") ORDER BY vaccination_rate DESC LIMIT 10"
       )
       .show()
+  }
+
+  def queryEleven(spark: SparkSession, df: DataFrame): Unit = {
+    df.createOrReplaceTempView("df")
+
+    println("U.S. Death Rate for 2021")
+    val q11 =
+      spark.sql(
+        "SELECT location, date, population, total_cases, (total_cases/population)*100 AS percentage_of_population_infected FROM df WHERE location LIKE(\"%States%\") AND date LIKE(\"%2021%\") ORDER BY date"
+      )
+
+    q11.show()
+    q11
+      .coalesce(1)
+      .write
+      .mode("overwrite")
+      .format("com.databricks.spark.csv")
+      .save("output/queryEleven")
+  }
+
+  def queryTwelve(spark: SparkSession, df: DataFrame): Unit = {
+    df.createOrReplaceTempView("df")
+
+    println("Percentage of global population infected")
+    val q12 =
+      spark.sql(
+        "SELECT location, population, MAX(total_cases) AS highest_infection_count, MAX((total_cases/population))*100 AS percentage_of_population_infected FROM df WHERE date LIKE (\"%2/7/2022%\") GROUP BY location, population ORDER BY percentage_of_population_infected DESC"
+      )
+
+    q12.show()
+    q12
+      .coalesce(1)
+      .write
+      .mode("overwrite")
+      .format("com.databricks.spark.csv")
+      .option("header", "true")
+      .save("output/queryTwelve")
+  }
+
+  def queryThirteen(spark: SparkSession, df: DataFrame): Unit = {
+    df.createOrReplaceTempView("df")
+    println("Percentage of global population vaccinated")
+
+    val q13 = spark.sql(
+      "SELECT location, date, population, MAX(people_fully_vaccinated) AS people_fully_vaccinated, MAX((people_fully_vaccinated/population))*100 AS percentage_of_people_fully_vaccinated FROM df WHERE date LIKE(\"%2/7/2022%\") GROUP BY location, date, population ORDER BY percentage_of_people_fully_vaccinated DESC"
+    )
+
+    q13
+      .coalesce(1)
+      .write
+      .format("com.databricks.spark.csv")
+      .mode("overwrite")
+      .option("header", "true")
+      .save("output/queryThirteen")
+
+    q13.show()
+
   }
 }
