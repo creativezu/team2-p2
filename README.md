@@ -1,4 +1,4 @@
-# team2-p2
+# Project 2 - Analyzing COVID Data
 Team 2 Project 2 Alvin, Chris, Taiyewo
 
 Requirements:
