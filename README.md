@@ -28,10 +28,8 @@ Requirements:
 - SBT
 - Scala 
 - Git + GitHub
-- Zeppelin (Other visualization tools)
+- Tableau
 
 
 ### Due Date
 - Presentations will take place on Thursday, 2/17
-
-SELECT DISTINCT location, MAX(total_cases) cases FROM covid-data GROUP BY location ORDER BY cases DESC LIMIT 10
